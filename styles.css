@@ -251,14 +251,6 @@ li::marker {
   color: var(--ink);
 }
 
-.footer-note {
-  margin-top: 5mm;
-  padding-top: 3mm;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 7.6pt;
-}
-
 @media (max-width: 820px) {
   .document {
     width: min(100%, 430px);

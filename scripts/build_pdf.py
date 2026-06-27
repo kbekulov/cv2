@@ -381,7 +381,6 @@ def build_story(styles):
     ]:
         story.append(p(item, styles["body"]))
 
-    story.extend([Spacer(1, 8), p("Targeted for Vinted's AI Automation process-architecture role. PDF version generated from the same content strategy.", styles["small"])])
     return story
 
 
