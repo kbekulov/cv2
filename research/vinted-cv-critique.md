@@ -3,7 +3,7 @@
 ## High-level criticism
 
 The previous web CV proved range, curiosity, and seniority, but it was not yet
-optimized for a two-page recruiter PDF. It read like a strategy page around a
+optimized for a one-page recruiter PDF. It read like a strategy page around a
 candidate rather than the candidate's final application document.
 
 The strongest criticism is positioning: the target role is not asking for a
@@ -24,7 +24,7 @@ then use RPA/C#/LLM evidence as proof.
   without looking like a hobby section.
 - Preserved quantified evidence: 100+ RPA solutions, 50+ operations procedures,
   and 99% worked-item success on urgent automation work.
-- Reduced long web sections into a two-page A4 structure with conventional
+- Reduced long web sections into a one-page A4 structure with conventional
   headings, clear reverse chronology, and dense but readable bullets.
 
 ## Research basis
@@ -64,5 +64,5 @@ then use RPA/C#/LLM evidence as proof.
   CV header.
 - Tightened the AI side-project proof point so it reads as shipped AI-assisted
   delivery practice rather than a hobby-tool list.
-- Reduced buzzword density around "agentic" and "AI-native" so the CV reads as
-  practical automation experience rather than trend-chasing.
+- Reduced AI trend-language density so the CV reads as practical automation
+  experience rather than trend-chasing.

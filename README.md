@@ -4,7 +4,7 @@ Working area for targeted CV drafts.
 
 ## Current draft
 
-The current draft is a Vinted-focused two-page CV for the Senior Business
+The current draft is a Vinted-focused one-page CV for the Senior Business
 Process Architect, AI Automation role:
 
 - `index.html`

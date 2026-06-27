@@ -8,7 +8,6 @@ from reportlab.lib.units import mm
 from reportlab.platypus import (
     BaseDocTemplate,
     Frame,
-    PageBreak,
     PageTemplate,
     Paragraph,
     Spacer,
@@ -45,26 +44,26 @@ def make_styles():
             "target",
             parent=base["Normal"],
             fontName="Helvetica-Bold",
-            fontSize=8.3,
-            leading=10,
+            fontSize=8,
+            leading=9.4,
             textColor=ACCENT_DARK,
-            spaceAfter=2,
+            spaceAfter=1,
         ),
         "name": ParagraphStyle(
             "name",
             parent=base["Normal"],
             fontName="Helvetica-Bold",
-            fontSize=31,
-            leading=32,
+            fontSize=28,
+            leading=29,
             textColor=INK,
-            spaceAfter=2,
+            spaceAfter=1,
         ),
         "headline": ParagraphStyle(
             "headline",
             parent=base["Normal"],
             fontName="Helvetica-Bold",
-            fontSize=12.6,
-            leading=15,
+            fontSize=11.5,
+            leading=13.4,
             textColor=ACCENT_DARK,
             spaceAfter=0,
         ),
@@ -72,59 +71,59 @@ def make_styles():
             "contact",
             parent=base["Normal"],
             fontName="Helvetica",
-            fontSize=8.2,
-            leading=11.4,
+            fontSize=7.8,
+            leading=9.8,
             textColor=ACCENT_DARK,
         ),
         "h2": ParagraphStyle(
             "h2",
             parent=base["Normal"],
             fontName="Helvetica-Bold",
-            fontSize=9.6,
-            leading=11,
+            fontSize=8.8,
+            leading=9.7,
             textColor=ACCENT_DARK,
-            spaceBefore=8,
-            spaceAfter=5,
+            spaceBefore=5,
+            spaceAfter=3.2,
         ),
         "h3": ParagraphStyle(
             "h3",
             parent=base["Normal"],
             fontName="Helvetica-Bold",
-            fontSize=9,
-            leading=10.5,
+            fontSize=8.4,
+            leading=9.3,
             textColor=INK,
-            spaceAfter=1,
+            spaceAfter=0,
         ),
         "body": ParagraphStyle(
             "body",
             parent=base["Normal"],
             fontName="Helvetica",
-            fontSize=8.55,
-            leading=11.3,
+            fontSize=7.6,
+            leading=9,
             textColor=MUTED,
         ),
         "body_dark": ParagraphStyle(
             "body_dark",
             parent=base["Normal"],
             fontName="Helvetica",
-            fontSize=8.85,
-            leading=11.7,
+            fontSize=7.9,
+            leading=9.4,
             textColor=INK,
         ),
         "small": ParagraphStyle(
             "small",
             parent=base["Normal"],
             fontName="Helvetica",
-            fontSize=7.8,
-            leading=10,
+            fontSize=7.1,
+            leading=8.4,
             textColor=MUTED,
         ),
         "date": ParagraphStyle(
             "date",
             parent=base["Normal"],
             fontName="Helvetica-Bold",
-            fontSize=8,
-            leading=10,
+            fontSize=7.4,
+            leading=8.8,
             textColor=ACCENT_DARK,
             alignment=TA_RIGHT,
         ),
@@ -150,7 +149,7 @@ def job(title, org, date, bullets, styles, compact=False):
                 p(date, styles["date"]),
             ]
         ],
-        colWidths=[128 * mm, 35 * mm],
+        colWidths=[140 * mm, 36 * mm],
         hAlign="LEFT",
     )
     heading.setStyle(
@@ -167,7 +166,7 @@ def job(title, org, date, bullets, styles, compact=False):
     rows = [heading]
     for item in bullets:
         rows.append(bullet(item, styles["body"]))
-    return rows + [Spacer(1, 3 if compact else 4)]
+    return rows + [Spacer(1, 2 if compact else 3)]
 
 
 def build_story(styles):
@@ -189,7 +188,7 @@ def build_story(styles):
                 contact,
             ]
         ],
-        colWidths=[120 * mm, 43 * mm],
+        colWidths=[130 * mm, 46 * mm],
         hAlign="LEFT",
     )
     header.setStyle(
@@ -198,15 +197,15 @@ def build_story(styles):
                 ("VALIGN", (0, 0), (-1, -1), "TOP"),
                 ("BACKGROUND", (1, 0), (1, 0), ACCENT_SOFT),
                 ("LEFTPADDING", (0, 0), (0, 0), 0),
-                ("RIGHTPADDING", (0, 0), (0, 0), 7),
-                ("LEFTPADDING", (1, 0), (1, 0), 8),
-                ("RIGHTPADDING", (1, 0), (1, 0), 7),
-                ("TOPPADDING", (0, 0), (-1, -1), 7),
-                ("BOTTOMPADDING", (0, 0), (-1, -1), 7),
+                ("RIGHTPADDING", (0, 0), (0, 0), 6),
+                ("LEFTPADDING", (1, 0), (1, 0), 6),
+                ("RIGHTPADDING", (1, 0), (1, 0), 6),
+                ("TOPPADDING", (0, 0), (-1, -1), 5),
+                ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
             ]
         )
     )
-    story.extend([header, Spacer(1, 5)])
+    story.extend([header, Spacer(1, 3)])
 
     story.append(section_title("Professional Summary", styles))
     story.append(
@@ -229,7 +228,7 @@ def build_story(styles):
                 card("Automation-first delivery", "100+ RPA solutions, 50+ operations automations, custom C#/.NET tooling, and LLM extensions to existing flows.", styles),
             ]
         ],
-        colWidths=[52.5 * mm, 52.5 * mm, 52.5 * mm],
+        colWidths=[58.5 * mm, 58.5 * mm, 58.5 * mm],
         hAlign="LEFT",
     )
     match.setStyle(
@@ -239,24 +238,24 @@ def build_story(styles):
                 ("BOX", (0, 0), (-1, -1), 0.25, LINE),
                 ("INNERGRID", (0, 0), (-1, -1), 0.25, LINE),
                 ("VALIGN", (0, 0), (-1, -1), "TOP"),
-                ("LEFTPADDING", (0, 0), (-1, -1), 7),
-                ("RIGHTPADDING", (0, 0), (-1, -1), 7),
-                ("TOPPADDING", (0, 0), (-1, -1), 6),
-                ("BOTTOMPADDING", (0, 0), (-1, -1), 6),
+                ("LEFTPADDING", (0, 0), (-1, -1), 5),
+                ("RIGHTPADDING", (0, 0), (-1, -1), 5),
+                ("TOPPADDING", (0, 0), (-1, -1), 4.2),
+                ("BOTTOMPADDING", (0, 0), (-1, -1), 4.2),
             ]
         )
     )
-    story.extend([match, Spacer(1, 5)])
+    story.extend([match, Spacer(1, 3)])
 
     metrics = Table(
         [
             [
-                [p("100+", ParagraphStyle("metric", fontName="Helvetica-Bold", fontSize=16, leading=17, textColor=ACCENT)), p("RPA solutions delivered or maintained", styles["small"])],
-                [p("50+", ParagraphStyle("metric", fontName="Helvetica-Bold", fontSize=16, leading=17, textColor=ACCENT)), p("operations procedures automated before RPA", styles["small"])],
-                [p("99%", ParagraphStyle("metric", fontName="Helvetica-Bold", fontSize=16, leading=17, textColor=ACCENT)), p("success rate on urgent award-winning automation work", styles["small"])],
+                [p("100+", ParagraphStyle("metric", fontName="Helvetica-Bold", fontSize=15, leading=15.5, textColor=ACCENT)), p("RPA solutions delivered or maintained", styles["small"])],
+                [p("50+", ParagraphStyle("metric", fontName="Helvetica-Bold", fontSize=15, leading=15.5, textColor=ACCENT)), p("operations procedures automated before RPA", styles["small"])],
+                [p("99%", ParagraphStyle("metric", fontName="Helvetica-Bold", fontSize=15, leading=15.5, textColor=ACCENT)), p("success rate on urgent award-winning automation work", styles["small"])],
             ]
         ],
-        colWidths=[52.5 * mm, 52.5 * mm, 52.5 * mm],
+        colWidths=[58.5 * mm, 58.5 * mm, 58.5 * mm],
         hAlign="LEFT",
     )
     metrics.setStyle(
@@ -266,14 +265,14 @@ def build_story(styles):
                 ("BOX", (0, 0), (-1, -1), 0.25, LINE),
                 ("INNERGRID", (0, 0), (-1, -1), 0.25, LINE),
                 ("VALIGN", (0, 0), (-1, -1), "TOP"),
-                ("LEFTPADDING", (0, 0), (-1, -1), 7),
-                ("RIGHTPADDING", (0, 0), (-1, -1), 7),
-                ("TOPPADDING", (0, 0), (-1, -1), 5),
-                ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+                ("LEFTPADDING", (0, 0), (-1, -1), 5),
+                ("RIGHTPADDING", (0, 0), (-1, -1), 5),
+                ("TOPPADDING", (0, 0), (-1, -1), 4),
+                ("BOTTOMPADDING", (0, 0), (-1, -1), 4),
             ]
         )
     )
-    story.extend([metrics, Spacer(1, 3), section_title("Experience", styles)])
+    story.extend([metrics, Spacer(1, 2.5), section_title("Experience", styles)])
 
     story.extend(
         job(
@@ -291,8 +290,6 @@ def build_story(styles):
             styles,
         )
     )
-
-    story.append(PageBreak())
 
     story.append(section_title("Earlier Experience", styles))
     story.extend(
@@ -347,7 +344,7 @@ def build_story(styles):
                 card("Delivery Leadership", "SAFe 5 Practitioner, Scrum support, BA/PO-adjacent requirements, QA standards, developer training and hiring", styles),
             ],
         ],
-        colWidths=[78 * mm, 78 * mm],
+        colWidths=[87.5 * mm, 87.5 * mm],
         hAlign="LEFT",
     )
     skills.setStyle(
@@ -357,14 +354,14 @@ def build_story(styles):
                 ("BOX", (0, 0), (-1, -1), 0.25, LINE),
                 ("INNERGRID", (0, 0), (-1, -1), 0.25, LINE),
                 ("VALIGN", (0, 0), (-1, -1), "TOP"),
-                ("LEFTPADDING", (0, 0), (-1, -1), 7),
-                ("RIGHTPADDING", (0, 0), (-1, -1), 7),
-                ("TOPPADDING", (0, 0), (-1, -1), 5),
-                ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+                ("LEFTPADDING", (0, 0), (-1, -1), 5),
+                ("RIGHTPADDING", (0, 0), (-1, -1), 5),
+                ("TOPPADDING", (0, 0), (-1, -1), 4),
+                ("BOTTOMPADDING", (0, 0), (-1, -1), 4),
             ]
         )
     )
-    story.extend([skills, Spacer(1, 3), section_title("Selected Proof Points", styles)])
+    story.extend([skills, Spacer(1, 2.5), section_title("Selected Proof Points", styles)])
 
     for item in [
         "<b>Reusable in-house automation platform:</b> helped build C# components that preserve familiar automation workflows while moving repeatable capabilities into internal tooling.",
@@ -384,27 +381,19 @@ def build_story(styles):
     return story
 
 
-def draw_page(canvas, doc):
-    canvas.saveState()
-    canvas.setFillColor(MUTED)
-    canvas.setFont("Helvetica", 7.5)
-    canvas.drawRightString(A4[0] - doc.rightMargin, 8 * mm, f"Page {doc.page} of 2")
-    canvas.restoreState()
-
-
 def main():
     OUT.parent.mkdir(parents=True, exist_ok=True)
     styles = make_styles()
     doc = BaseDocTemplate(
         str(OUT),
         pagesize=A4,
-        leftMargin=15 * mm,
-        rightMargin=15 * mm,
-        topMargin=14 * mm,
-        bottomMargin=12 * mm,
+        leftMargin=12 * mm,
+        rightMargin=12 * mm,
+        topMargin=11 * mm,
+        bottomMargin=11 * mm,
     )
     frame = Frame(doc.leftMargin, doc.bottomMargin, doc.width, doc.height, id="normal")
-    template = PageTemplate(id="cv", frames=[frame], onPage=draw_page)
+    template = PageTemplate(id="cv", frames=[frame])
     doc.addPageTemplates([template])
     doc.build(build_story(styles))
     print(OUT)
