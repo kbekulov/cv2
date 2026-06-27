@@ -17,7 +17,7 @@ from reportlab.platypus import (
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "output" / "pdf" / "kiril-bekulov-vinted-ai-automation-cv.pdf"
+OUT = ROOT / "output" / "pdf" / "kiril-bekulov-vinted-ai-automation-cv-one-page.pdf"
 
 ACCENT = colors.HexColor("#0f766e")
 ACCENT_DARK = colors.HexColor("#0a5550")

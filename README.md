@@ -10,7 +10,7 @@ Process Architect, AI Automation role:
 - `index.html`
 - `styles.css`
 - `scripts/build_pdf.py`
-- `output/pdf/kiril-bekulov-vinted-ai-automation-cv.pdf`
+- `output/pdf/kiril-bekulov-vinted-ai-automation-cv-one-page.pdf`
 - `assets/research/vinted-cv-concept.png`
 - `research/vinted-cv-critique.md`
 
@@ -39,7 +39,7 @@ PYTHONPATH=/Users/kirilbekulov/.cache/codex-runtimes/codex-primary-runtime/depen
   /Users/kirilbekulov/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/build_pdf.py
 ```
 
-The output is written to `output/pdf/kiril-bekulov-vinted-ai-automation-cv.pdf`.
+The output is written to `output/pdf/kiril-bekulov-vinted-ai-automation-cv-one-page.pdf`.
 
 Resume-building guidance used for this draft:
 
