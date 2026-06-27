@@ -211,6 +211,7 @@ li::marker {
 
 .experience,
 .skills,
+.prototype-proof,
 .achievements,
 .education,
 .strategy-note,
@@ -265,6 +266,17 @@ li::marker {
   background: #f8fbfa;
   border: 1px solid var(--line);
   border-radius: var(--radius);
+}
+
+.prototype-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.prototype-grid p {
+  margin-bottom: 0;
+  color: var(--muted);
 }
 
 .achievement-list {
@@ -335,6 +347,7 @@ li::marker {
 
   .fit-metrics,
   .skills-grid,
+  .prototype-grid,
   .achievement-list {
     grid-template-columns: 1fr;
   }
@@ -370,6 +383,7 @@ li::marker {
   .scan-panel,
   .job,
   .skills-grid,
+  .prototype-grid,
   .achievement-list,
   .education-grid {
     display: block;
