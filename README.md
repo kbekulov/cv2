@@ -4,12 +4,15 @@ Working area for targeted CV drafts.
 
 ## Current draft
 
-The first page is a Vinted-focused CV prototype for the Senior Business Process
-Architect, AI Automation role:
+The current draft is a Vinted-focused two-page CV for the Senior Business
+Process Architect, AI Automation role:
 
 - `index.html`
 - `styles.css`
+- `scripts/build_pdf.py`
+- `output/pdf/kiril-bekulov-vinted-ai-automation-cv.pdf`
 - `assets/research/vinted-cv-concept.png`
+- `research/vinted-cv-critique.md`
 
 ## Research snapshot
 
@@ -27,6 +30,17 @@ outside-work AI practice through a Codex-assisted platformer game with
 AI-produced art/music.
 The strongest next proof to add is one concrete C# platform or LLM/RPA example
 with measurable scope and outcome.
+
+## Build PDF
+
+Use the bundled Python/reportlab runtime:
+
+```bash
+PYTHONPATH=/Users/kirilbekulov/.cache/codex-runtimes/codex-primary-runtime/dependencies/python \
+  /Users/kirilbekulov/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/build_pdf.py
+```
+
+The output is written to `output/pdf/kiril-bekulov-vinted-ai-automation-cv.pdf`.
 
 Resume-building guidance used for this draft:
 
