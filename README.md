@@ -23,11 +23,10 @@ technical briefs, n8n-ready low-code automation, and reusable documentation.
 The current Kiril profile has strong alignment through FinTech process rigor,
 SQL/VBA operations automation, Blue Prism delivery, custom C#/JS/VB helpers,
 quality-control standards, team training, and recent LLM integration into RPA
-workflows. Additional strong signals: custom C# automation-platform work as the
-department moves away from commercial RPA license dependency, PO-adjacent
-business-analysis support after a product-owner role remained unfilled, and
-outside-work AI practice through a Codex-assisted platformer game with
-AI-produced art/music.
+workflows. Additional strong signals: reusable in-house C# automation-platform
+work, BA/PO-adjacent business-analysis support during a resourcing gap, and
+outside-work AI practice through a shipped platformer prototype built with
+LLM-assisted coding and generative-media workflows.
 The strongest next proof to add is one concrete C# platform or LLM/RPA example
 with measurable scope and outcome.
 

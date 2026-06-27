@@ -17,7 +17,7 @@ then use RPA/C#/LLM evidence as proof.
 
 - Removed role-match score styling, sources, and working-draft notes from the
   visible CV.
-- Reframed the opening as a fit thesis for agentic-ready workflow logic.
+- Reframed the opening around reliable workflow logic for AI automation.
 - Promoted BA/PO-adjacent requirements support and C# automation-platform work
   into the primary experience section.
 - Compressed side-project AI work into one proof point so it supports the role
@@ -51,3 +51,18 @@ then use RPA/C#/LLM evidence as proof.
   measurable result.
 - If possible, add one n8n proof or a small workflow demo because the role names
   n8n directly.
+
+## HR trust cleanup
+
+- Avoided wording that sounds like an internal build note or cover-letter
+  strategy.
+- Removed phrases that could read as employer criticism, such as emphasizing an
+  unfilled product-owner role.
+- Rephrased internal platform work to avoid sounding like confidential company
+  strategy while still showing C# automation-platform relevance.
+- Removed company-specific targeting from public HTML metadata and the visible
+  CV header.
+- Tightened the AI side-project proof point so it reads as shipped AI-assisted
+  delivery practice rather than a hobby-tool list.
+- Reduced buzzword density around "agentic" and "AI-native" so the CV reads as
+  practical automation experience rather than trend-chasing.

@@ -182,9 +182,9 @@ def build_story(styles):
         [
             [
                 [
-                    p("Target role: Vinted - Senior Business Process Architect, AI Automation", styles["target"]),
+                    p("Automation Process Architecture | AI Workflow Design", styles["target"]),
                     p("Kiril Bekulov", styles["name"]),
-                    p("Automation and process architect for agentic-ready workflow logic", styles["headline"]),
+                    p("Process automation specialist focused on reliable workflow logic", styles["headline"]),
                 ],
                 contact,
             ]
@@ -208,23 +208,23 @@ def build_story(styles):
     )
     story.extend([header, Spacer(1, 5)])
 
-    story.append(section_title("Fit Thesis", styles))
+    story.append(section_title("Professional Summary", styles))
     story.append(
         p(
             "Senior automation developer with FinTech process discipline, RPA CoE delivery, "
             "custom C# platform work, and recent LLM/RPA integration experience. Strongest "
-            "fit for Vinted is translating ambiguous human handoffs into deterministic "
-            "process maps, data contracts, validation gates, fallback loops, and technical "
-            "briefs that engineers and automated agents can execute safely.",
+            "value is translating ambiguous human handoffs into deterministic process maps, "
+            "data requirements, validation gates, fallback paths, and technical briefs that "
+            "engineers and automated systems can execute safely.",
             styles["body_dark"],
         )
     )
 
-    story.append(section_title("Vinted Need -> Evidence", styles))
+    story.append(section_title("Role-Relevant Evidence", styles))
     match = Table(
         [
             [
-                card("Agent-safe workflow logic", "RPA delivery across edge cases, retries, exception routes, human escalation, and audit-friendly process states.", styles),
+                card("Reliable workflow logic", "RPA delivery across edge cases, retries, exception routes, human escalation, and audit-friendly process states.", styles),
                 card("Data contracts and briefs", "SQL/VBA reporting, API PoCs, payload thinking, BA/PO-adjacent requirements, and developer-facing standards.", styles),
                 card("Automation-first delivery", "100+ RPA solutions, 50+ operations automations, custom C#/.NET tooling, and LLM extensions to existing flows.", styles),
             ]
@@ -281,10 +281,10 @@ def build_story(styles):
             "FinTech Automation CoE",
             "Sep 2021 - Present",
             [
-                "Implemented LLM-enabled extensions to classic RPA business logic, focusing on reliable boundaries, validation points, and human escalation when automation should not infer.",
-                "Built extensive multi-bot Blue Prism automations and custom C#, JavaScript, and VB components to remove repeated developer effort and harden delivery patterns.",
-                "Contributed to internal C# automation-platform projects as the department moves away from Blue Prism and UiPath license dependency while preserving core automation capabilities.",
-                "Took on BA/PO-adjacent support after a product-owner role remained unfilled: clarified stakeholder needs, structured requirements, and supported delivery follow-through.",
+                "Implemented LLM-assisted extensions to classic RPA business logic, focusing on clear validation boundaries, exception handling, and human escalation when automation should not infer.",
+                "Built extensive multi-bot Blue Prism automations and custom C#, JavaScript, and VB components to remove repeated developer effort and standardise delivery patterns.",
+                "Contributed to reusable internal C# automation components that provide familiar workflow-orchestration features and support a transition toward in-house tooling.",
+                "Supported BA/PO responsibilities during a resourcing gap: clarified stakeholder needs, structured requirements, and supported delivery follow-through.",
                 "Established coding standards, QA practices, reusable development guidance, and quality-control chapter coordination for a growing automation team.",
                 "Trained developers, resolved technical blockers, interviewed junior/mid-level candidates, supported Scrum ceremonies, and built PoCs for APIs, C# apps, VBA, Power Automate, and UiPath.",
             ],
@@ -343,7 +343,7 @@ def build_story(styles):
                 card("Technical Interfaces", "C#, .NET, JavaScript, VB/VBA, SQL, Access, APIs, JSON/payload requirements, mainframe/web workflows", styles),
             ],
             [
-                card("Automation and AI", "Blue Prism, UiPath, Power Automate, LLM/RPA integration, low-code orchestration mindset, agentic AI interest", styles),
+                card("Automation and AI", "Blue Prism, UiPath, Power Automate, LLM/RPA integration, low-code orchestration, AI-assisted workflow design", styles),
                 card("Delivery Leadership", "SAFe 5 Practitioner, Scrum support, BA/PO-adjacent requirements, QA standards, developer training and hiring", styles),
             ],
         ],
@@ -367,8 +367,8 @@ def build_story(styles):
     story.extend([skills, Spacer(1, 3), section_title("Selected Proof Points", styles)])
 
     for item in [
-        "<b>License-independent automation platform:</b> helped build internal C# automation capabilities to reduce reliance on commercial RPA licenses while keeping familiar automation functions available.",
-        "<b>AI-native builder outside work:</b> early adopter of ChatGPT, Codex, Gemini, and Suno; built a Codex-assisted platformer game with AI-produced art/music, five playable levels, a completed level-5 boss battle, and level 6 in progress.",
+        "<b>Reusable in-house automation platform:</b> helped build C# components that preserve familiar automation workflows while moving repeatable capabilities into internal tooling.",
+        "<b>Applied AI tooling project:</b> shipped a playable five-level platformer prototype with a completed boss encounter, using LLM-assisted coding and generative-media workflows for art and music.",
         "<b>Business-to-engineering translator:</b> combines process mapping, SQL reporting, technical training, custom code, QA standards, and stakeholder-facing documentation.",
     ]:
         story.append(bullet(item, styles["body"]))
